@@ -31,7 +31,11 @@ namespace Hangman
           private void StartRound()
           {
                secretWord = wordProvider.GetRandomWord();
-               wordState = new string('_', secretWord.Length).ToCharArray();
+
+               // Declare, initialize and assign _ to every slot in wordState
+               wordState = new char[secretWord.Length];
+               for (int i = 0; i < wordState.Length; i++) wordState[i] = '_';
+               
                guessesLeft = MaxGuesses;
                wrongLetters.Clear();
                Console.WriteLine(secretWord);

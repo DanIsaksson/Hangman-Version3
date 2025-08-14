@@ -15,7 +15,7 @@ namespace Hangman
         public string GetRandomWord()
         {
             int index = random.Next(Words.Length);
-            return Words[index].ToLowerInvariant();
+            return Words[index].ToLower();
         }
     }
 }
