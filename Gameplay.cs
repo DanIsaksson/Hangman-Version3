@@ -35,12 +35,20 @@ namespace Hangman
                // Declare, initialize and assign _ to every slot in wordState
                wordState = new char[secretWord.Length];
                for (int i = 0; i < wordState.Length; i++) wordState[i] = '_';
-               
+
                guessesLeft = MaxGuesses;
                wrongLetters.Clear();
                Console.WriteLine(secretWord);
                Console.WriteLine(wordState);
                Console.ReadLine();
+          }
+
+          private void PlayRound()
+          {
+               while (guessesLeft > 0 && new string(wordState).Contains('_'))
+               {
+                    
+               }
           }
      }
 }
