@@ -158,6 +158,7 @@ namespace Hangman
 
                if (!found)
                {
+                    //adds letter char to wrongLetters List<char>
                     wrongLetters.Add(letter);
                     guessesLeft--;
                }
@@ -182,22 +183,10 @@ namespace Hangman
         public static bool AskPlayAgain()
         {
             Console.Write("Play again? (y/n): ");
+            // string? gives no errors if it's null.
             string? response = Console.ReadLine();
+            //returns true or false value based on if the response is "y", other things means "n"
             return response != null && response.Trim().ToLower().StartsWith('y');
         }
      }
 }
- 
-               //  __  __    _    ___ _   _   __  __ _____ _   _ _   _ 
-               // |  \/  |  / \  |_ _| \ | | |  \/  | ____| \ | | | | |
-               // | |\/| | / _ \  | ||  \| | | |\/| |  _| |  \| | | | |
-               // | |  | |/ ___ \ | || |\  | | |  | | |___| |\  | |_| |
-               // |_|  |_/_/   \_\___|_| \_| |_|  |_|_____|_| \_|\___/
-
-
-
-               //  ____     _   __   __ _____ ____   _        _   __   __
-               // / ___|   / \  |  \/  | ___  | _ \ | |      / \  \ \ / /
-               // | |  _  / _ \ | |\/| |  _|  ||_) || |     / _ \  \ V / 
-               // | |_| |/ ___ \| |  | | |___ | __/ | |__  / ___ \  | |  
-               // \____/_/    \_\_|  |_|_____ |_|   |_____/_/   \_\ |_|
